@@ -1,9 +1,9 @@
 <?php
 
-namespace Moyasar;
+namespace AhmedEbead\Moyasar;
 
-use Moyasar\Exceptions\ValidationException;
-use Moyasar\Providers\InvoiceService;
+use AhmedEbead\Moyasar\Exceptions\ValidationException;
+use AhmedEbead\Moyasar\Providers\InvoiceService;
 
 class Invoice extends OnlineResource
 {
@@ -143,7 +143,7 @@ class Invoice extends OnlineResource
      * @return void
      * @throws ValidationException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function update($arguments)
     {
@@ -157,7 +157,7 @@ class Invoice extends OnlineResource
      *
      * @return void
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function cancel()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Moyasar;
+namespace AhmedEbead\Moyasar;
 
 class CreditCard extends Source
 {

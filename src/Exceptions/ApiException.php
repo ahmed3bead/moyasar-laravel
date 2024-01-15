@@ -1,6 +1,6 @@
 <?php
 
-namespace Moyasar\Exceptions;
+namespace AhmedEbead\Moyasar\Exceptions;
 
 use Throwable;
 

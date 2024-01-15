@@ -1,15 +1,15 @@
 <?php
 
-namespace Moyasar\Facades;
+namespace AhmedEbead\Moyasar\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Moyasar\Providers\PaymentService;
+use AhmedEbead\Moyasar\Providers\PaymentService;
 
 /**
- * @method static \Moyasar\Payment fetch($id)
- * @method static \Moyasar\PaginationResult all($query = null)
+ * @method static \AhmedEbead\Moyasar\Facades\Payment fetch($id)
+ * @method static \AhmedEbead\Moyasar\PaginationResult all($query = null)
  *
- * @see \Moyasar\Providers\PaymentService
+ * @see \AhmedEbead\Moyasar\Providers\PaymentService
  *
  * Class Payment
  * @package Moyasar\Facades

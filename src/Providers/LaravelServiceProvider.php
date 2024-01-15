@@ -1,9 +1,9 @@
 <?php
 
-namespace Moyasar\Providers;
+namespace AhmedEbead\Moyasar\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Moyasar\Moyasar;
+use AhmedEbead\Moyasar\Moyasar;
 
 class LaravelServiceProvider extends ServiceProvider
 {
@@ -18,16 +18,16 @@ class LaravelServiceProvider extends ServiceProvider
             return (new GuzzleClientFactory)->build();
         });
 
-        $this->app->bind(\Moyasar\Contracts\HttpClient::class, function ($app) {
+        $this->app->bind(\AhmedEbead\Moyasar\Contracts\HttpClient::class, function ($app) {
             return new HttpClient($app->make('moyasar-http-client'));
         });
 
         $this->app->bind(PaymentService::class, function ($app) {
-            return new PaymentService($app->make(\Moyasar\Contracts\HttpClient::class));
+            return new PaymentService($app->make(\AhmedEbead\Moyasar\Contracts\HttpClient::class));
         });
 
         $this->app->bind(InvoiceService::class, function ($app) {
-            return new InvoiceService($app->make(\Moyasar\Contracts\HttpClient::class));
+            return new InvoiceService($app->make(\AhmedEbead\Moyasar\Contracts\HttpClient::class));
         });
     }
 
@@ -40,14 +40,10 @@ class LaravelServiceProvider extends ServiceProvider
     public function boot()
     {
         $path = realpath(__DIR__ . '/../../config/config.php');
-
         $this->publishes([$path => config_path('moyasar.php')], 'config');
-
         $this->mergeConfigFrom($path, 'moyasar');
-
         $config = $this->app->make('config');
-
-        Moyasar::setApiKey($config->get('moyasar.key'));
+        Moyasar::setSecretApiKey($config->get('moyasar.secret_key'));
         Moyasar::setPublishableApiKey($config->get('moyasar.publishable_key'));
     }
 }

@@ -3,8 +3,8 @@
 namespace Moyasar;
 
 use GuzzleHttp\Exception\InvalidArgumentException;
-use Moyasar\Exceptions\ValidationException;
-use Moyasar\Providers\PaymentService;
+use AhmedEbead\Moyasar\Exceptions\ValidationException;
+use AhmedEbead\Moyasar\Providers\PaymentService;
 
 class Payment extends OnlineResource
 {

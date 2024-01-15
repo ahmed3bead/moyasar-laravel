@@ -1,12 +1,12 @@
 <?php
 
-namespace Moyasar\Providers;
+namespace AhmedEbead\Moyasar\Providers;
 
-use Moyasar\Contracts\HttpClient as ClientContract;
-use Moyasar\Exceptions\ValidationException;
-use Moyasar\Invoice;
-use Moyasar\PaginationResult;
-use Moyasar\Search;
+use AhmedEbead\Moyasar\Contracts\HttpClient as ClientContract;
+use AhmedEbead\Moyasar\Exceptions\ValidationException;
+use AhmedEbead\Moyasar\Invoice;
+use AhmedEbead\Moyasar\PaginationResult;
+use AhmedEbead\Moyasar\Search;
 
 class InvoiceService
 {
@@ -33,7 +33,7 @@ class InvoiceService
      * @return Invoice
      * @throws ValidationException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function create($arguments)
     {
@@ -101,7 +101,7 @@ class InvoiceService
      * @param string $id
      * @return Invoice
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function fetch($id)
     {
@@ -115,7 +115,7 @@ class InvoiceService
      * @param Search|array\null $query
      * @return PaginationResult
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function all($query = null)
     {

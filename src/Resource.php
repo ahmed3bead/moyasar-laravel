@@ -1,6 +1,6 @@
 <?php
 
-namespace Moyasar;
+namespace AhmedEbead\Moyasar;
 
 abstract class Resource
 {
@@ -13,7 +13,7 @@ abstract class Resource
 
     /**
      * Converts snake_case to camelCase
-     * 
+     *
      * @param string $name
      * @return string
      */

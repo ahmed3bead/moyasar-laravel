@@ -1,13 +1,13 @@
 <?php
 
-namespace Moyasar\Providers;
+namespace AhmedEbead\Moyasar\Providers;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\RequestOptions;
-use Moyasar\Contracts\HttpClient as HttpClientContract;
-use Moyasar\Exceptions\ApiException;
-use Moyasar\Moyasar;
+use AhmedEbead\Moyasar\Contracts\HttpClient as HttpClientContract;
+use AhmedEbead\Moyasar\Exceptions\ApiException;
+use AhmedEbead\Moyasar\Moyasar;
 use Psr\Http\Message\ResponseInterface;
 
 class HttpClient implements HttpClientContract

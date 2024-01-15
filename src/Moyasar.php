@@ -1,6 +1,6 @@
 <?php
 
-namespace Moyasar;
+namespace AhmedEbead\Moyasar;
 
 class Moyasar
 {
@@ -20,6 +20,13 @@ class Moyasar
      * @var string
      */
     private static $publishableApiKey;
+    private static $secretApiKey;
+
+
+    public static function authenticate()
+    {
+        dd(self::getPublishableApiKey());
+    }
 
     public static function setApiKey($apiKey)
     {
@@ -40,4 +47,21 @@ class Moyasar
     {
         return self::$publishableApiKey;
     }
+
+    /**
+     * @return mixed
+     */
+    public static function getSecretApiKey()
+    {
+        return self::$secretApiKey;
+    }
+
+    /**
+     * @param mixed $secretApiKey
+     */
+    public static function setSecretApiKey($secretApiKey): void
+    {
+        self::$secretApiKey = $secretApiKey;
+    }
+
 }

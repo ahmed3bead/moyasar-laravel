@@ -1,6 +1,6 @@
 <?php
 
-namespace Moyasar\Contracts;
+namespace AhmedEbead\Moyasar\Contracts;
 
 interface HttpClient
 {

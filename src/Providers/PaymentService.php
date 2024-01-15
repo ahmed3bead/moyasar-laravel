@@ -1,11 +1,11 @@
 <?php
 
-namespace Moyasar\Providers;
+namespace AhmedEbead\Moyasar\Providers;
 
-use Moyasar\Contracts\HttpClient as ClientContract;
-use Moyasar\PaginationResult;
-use Moyasar\Payment;
-use Moyasar\Search;
+use AhmedEbead\Moyasar\Contracts\HttpClient as ClientContract;
+use AhmedEbead\Moyasar\PaginationResult;
+use AhmedEbead\Moyasar\Facades\Payment;
+use AhmedEbead\Moyasar\Search;
 
 class PaymentService
 {
@@ -21,7 +21,6 @@ class PaymentService
         if ($client == null) {
             $client = new HttpClient();
         }
-
         $this->client = $client;
     }
 
@@ -31,7 +30,7 @@ class PaymentService
      * @param string $id
      * @return Payment
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function fetch($id)
     {
@@ -47,7 +46,7 @@ class PaymentService
      * @param Search|array|null $query
      * @return PaginationResult
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Moyasar\Exceptions\ApiException
+     * @throws \AhmedEbead\Moyasar\Exceptions\ApiException
      */
     public function all($query = null)
     {

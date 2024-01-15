@@ -1,8 +1,8 @@
 <?php
 
-namespace Moyasar;
+namespace AhmedEbead\Moyasar;
 
-use Moyasar\Contracts\HttpClient;
+use AhmedEbead\Moyasar\Contracts\HttpClient;
 
 class OnlineResource extends Resource
 {

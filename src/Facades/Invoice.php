@@ -1,16 +1,16 @@
 <?php
 
-namespace Moyasar\Facades;
+namespace AhmedEbead\Moyasar\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Moyasar\Providers\InvoiceService;
+use AhmedEbead\Moyasar\Providers\InvoiceService;
 
 /**
- * @method static \Moyasar\Invoice create($arguments)
- * @method static \Moyasar\Invoice fetch($id)
- * @method static \Moyasar\PaginationResult all($query = null)
+ * @method static \AhmedEbead\Moyasar\Invoice create($arguments)
+ * @method static \AhmedEbead\Moyasar\Invoice fetch($id)
+ * @method static \AhmedEbead\Moyasar\PaginationResult all($query = null)
  *
- * @see \Moyasar\Providers\InvoiceService
+ * @see \AhmedEbead\Moyasar\Providers\InvoiceService
  *
  * Class Invoice
  * @package Moyasar\Facades
