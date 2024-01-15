@@ -88,7 +88,7 @@ class PaymentService
         if (empty($paymentDetails['currency'])) {
             $paymentDetails['currency'] = config('moyasar.default_currency');
         }
-        $paymentDetails['callback_url'] = config('moyasar.callback_url');
+        $paymentDetails['callback_url'] = config('moyasar.payments_callback_url');
         $response = $this->client->post(self::PAYMENT_PATH, $paymentDetails);
         $payment = Payment::fromArray($response->toArray());
         $payment->setClient($this->client);

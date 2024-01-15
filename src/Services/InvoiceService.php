@@ -45,7 +45,7 @@ class InvoiceService
     {
         $arguments = array_merge($this->defaultCreateArguments(), $arguments);
         $this->validateCreateArguments($arguments);
-
+        $arguments['callback_url'] = config('moyasar.invoices_callback_url');
         $response = $this->client->post(self::INVOICE_PATH, $arguments);
         $data = $response->toArray();
 
