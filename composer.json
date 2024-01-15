@@ -1,0 +1,71 @@
+{
+    "name": "ahmed3bead/moyasar-laravel",
+    "description": "Laravel wrapper library for Moyasar payment services",
+    "keywords": [
+        "moyasar",
+        "payment",
+        "invoice",
+        "pay",
+        "refund",
+        "visa",
+        "mada",
+        "master",
+        "card",
+        "sadad",
+        "laravel",
+        "apple",
+        "pay",
+        "capture",
+        "void",
+        "credit",
+        "cc"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Ahmed Ebead",
+            "email": "ahmedm3bead@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "guzzlehttp/guzzle": "^6.3|^7.0",
+        "ext-json": "*",
+        "guzzlehttp/psr7": "^2.1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.19|^9.5.8",
+        "mockery/mockery": "^1.2.4"
+    },
+    "suggest": {
+        "laravel/framework": "Allows Moyasar payment services to be auto injected into current app container"
+    },
+    "autoload": {
+        "psr-4": {
+            "AhmedEbead\\Moyasar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Payment": "AhmedEbead\\Moyasar\\Facades\\Payment",
+                "Invoice": "AhmedEbead\\Moyasar\\Facades\\Invoice"
+            },
+            "providers": [
+                "AhmedEbead\\Moyasar\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test:ci": "composer test -- --verbose --coverage-text --coverage-clover=coverage.xml"
+    }
+}
