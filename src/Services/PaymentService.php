@@ -94,29 +94,4 @@ class PaymentService
         $payment->setClient($this->client);
         return $payment;
     }
-
-    // Update meta and description
-    public function update($id, array $newData): Resource
-    {
-        $response = $this->client->put(self::PAYMENT_PATH . '/' . $id, $newData);
-        $payment = Payment::fromArray($response->toArray());
-        $payment->setClient($this->client);
-        return $payment;
-    }
-
-    public function refund($id, int $amount): Resource
-    {
-        $response = $this->client->post(self::PAYMENT_PATH . '/' . $id . '/refund', ['amount' => $amount]);
-        $payment = Payment::fromArray($response->toArray());
-        $payment->setClient($this->client);
-        return $payment;
-    }
-
-    public function capture($id, int $amount): Resource
-    {
-        $response = $this->client->post(self::PAYMENT_PATH . '/' . $id . '/capture', ['amount' => $amount]);
-        $payment = Payment::fromArray($response->toArray());
-        $payment->setClient($this->client);
-        return $payment;
-    }
 }
