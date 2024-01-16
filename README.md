@@ -1,6 +1,5 @@
-# moyasar-laravel
 
-[![PHP version](https://badge.fury.io/ph/moyasar%2Fmoyasar.svg)](https://badge.fury.io/ph/moyasar%2Fmoyasar)
+# Moyasar Laravel
 
 Moyasar PHP wrapper library
 
@@ -217,6 +216,14 @@ For example:
 ```php
 $payment = \Moyasar\Facades\Payment::fetch('id');
 ```
+
+## TODO
+- Payout Payment
+- Token Payment
+- Webhooks
+
 ## License
 
 The package is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
