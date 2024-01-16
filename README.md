@@ -211,7 +211,7 @@ Or if you want a quick way to use these services, you can use the `Payment` and 
 For example:
 
 ```php
-$payment = \Moyasar\Facades\Payment::fetch('id');
+$payment = \AhmedEbead\Moyasar\Facades\Payment::fetch('id');
 ```
 
 ## TODO
