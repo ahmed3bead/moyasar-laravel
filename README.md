@@ -9,17 +9,9 @@ See the [PHP API docs](https://docs.moyasar.com/introduction)
 
 ## Requirements
 
-- PHP 5.6.0
+- PHP ^8
 - guzzlehttp/guzzle: ^6.3.0
 - laravel/framework: ^9.0
-
-#### Notes
-
-- Please note that starting from version `1.0.0` the library was rewritten with breaking changes, so please do not update
-  unless you need the new version. If you are new, it is recommended to use the new version.
-- To use the PHP stream handler, allow_url_fopen must be enabled in your system's php.ini.
-- To use the cURL handler, you must have a recent version of cURL >= 7.19.4 compiled with OpenSSL and zlib.
-- Please note that in version `0.5.0` the library name has been changed from `moyasar-php` to `moyasar`
 
 ## Installation
 
