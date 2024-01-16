@@ -5,7 +5,7 @@ Moyasar PHP wrapper library
 
 ## Documentation
 
-See the [PHP API docs](https://moyasar.com/docs/api/?php)
+See the [PHP API docs](https://docs.moyasar.com/introduction)
 
 ## Requirements
 
